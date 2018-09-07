@@ -1,0 +1,74 @@
+<style type="text/css">
+h2 {
+    margin: 0px;
+}
+
+select, input {
+    font: 20px "Trebuchet MS";
+}
+</style>
+
+<script type="text/javascript">
+var f = ["manufacturer", "form-factor", "memory", "cpu-socket"];
+function g(i) { var e = document.getElementById(i); return e.options[e.selectedIndex].value; }
+
+function amzSearch() {
+    var s = "", a;
+
+    for(var i = 0; i < f.length; i++) {
+        a = g(f[i]);
+        if(a) { s += " " + a; }
+    }
+
+    window.open("http://www.amazon.com/gp/search?tag=louisrosenblu-20&keywords=" + encodeURIComponent(s.substr(1))); + "motherboard"
+}
+</script>
+
+<h2>Select a manufacturer:</h2>
+<select id="manufacturer">
+    <option value="" selected disabled>-</option>
+    
+    <option>ASRock</option>
+    <option>ASUS</option>
+    <option>EVGA</option>
+    <option>Intel</option>
+    <option>Gigabyte</option>
+    <option>MSI</option>
+	<option>Zotac</option>
+</select><br><br>
+
+<h2>Select a CPU socket:</h2>
+<select id="cpu-socket">
+    <option value="" selected disabled>-</option>
+    
+    <option>LGA 1150</option>
+    <option>LGA 1151</option>
+	 <option>LGA 1155</option>
+    <option>LGA 1366</option>
+    <option>LGA 2011-3</option>
+    <option>LGA 2066</option>
+	<option>AM3+</option>
+    <option>AM4</option>
+</select><br><br>
+
+<h2>Select a form factor:</h2>
+<select id="form-factor">
+    <option value="" selected disabled>-</option>
+    <option>ATX</option>
+    <option>Micro ATX</option>
+    <option>Mini ITX</option>
+    <option>Ultra ATX</option>
+</select><br><br>
+
+<h2>Select a memory standard:</h2>
+<select id="memory">
+    <option value="" selected disabled>-</option>
+    <option>DDR</option>
+    <option>DDR2</option>
+    <option>DDR3</option>
+    <option>DDR4</option>
+</select><br><br>
+
+
+
+<input type="button" value="Find your motherboard!" onclick="amzSearch();">

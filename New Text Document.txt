@@ -1,0 +1,55 @@
+
+
+<select id="dropdown">
+   <option value="">Select a manufacturer</option>
+    <option value="AMD">AMD</option>
+    <option value="ASRock">ASRock</option>
+    <option value="ASUS">ASUS</option>
+    <option value="EVGA">EVGA</option>
+    <option value="Intel">Intel</option>
+    <option value="Gigabyte">Gigabyte</option>
+    <option value="MSI">MSI</option>
+</select>
+
+<br>
+<br>
+<br>
+
+<select id="dropdown2">
+   <option value="">Select a form factor</option>
+    <option value="AMD">ATX</option>
+    <option value="Mixro ATX">Micro ATX</option>
+    <option value="Mini ITX">Mini ITX</option>
+    <option value="Ultra ATX">EVGA</option>
+</select>
+
+<br>
+<br>
+<br>
+
+<select id="dropdown3">
+   <option value="">Select a memory standard</option>
+    <option value="DDR">DDR</option>
+    <option value="DDR2">DDR2</option>
+    <option value="DDR3">DDR3</option>
+    <option value="DDR4">DDR4</option>
+</select>
+
+<textarea id="mytext"></textarea>
+
+var mytextbox = document.getElementById('mytext');
+var mydropdown = document.getElementById('dropdown');
+var mydropdown2 = document.getElementById('dropdown2');
+var mydropdown3 = document.getElementById('dropdown3');
+
+mydropdown.onchange = function(){
+mytextbox.value = mytextbox.value  + this.value;
+}
+
+mydropdown2.onchange = function(){
+mytextbox.value = mytextbox.value  + this.value;
+}
+
+mydropdown3.onchange = function(){
+mytextbox.value = mytextbox.value  + this.value;
+}
